@@ -17,6 +17,7 @@ import {
 	updateUserStart,
 	updateUserSuccess,
 } from "../redux/user/userSlice";
+import { Link } from "react-router-dom";
 
 export default function Profile() {
 	const fileRef = useRef(null);
@@ -186,6 +187,12 @@ export default function Profile() {
 				>
 					{loading ? "updating..." : "Update"}
 				</button>
+				<Link
+					className=' rounded-lg p-3 bg-green-700 text-white text-center uppercase hover:opacity-95 disabled:opacity-80'
+					to='/create-listing'
+				>
+					Create Listing
+				</Link>
 			</form>
 			<div className=' justify-between flex mt-5'>
 				<span
